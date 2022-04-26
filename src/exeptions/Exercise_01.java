@@ -8,9 +8,11 @@ public class Exercise_01 {
         try{
             System.out.println(names[-5]);
         }
-        catch (ArrayIndexOutOfBoundsException exception){
-            System.out.println("\"An exception is here!!!!!\"");
+        catch (Exception e){
+            e.getCause();
         }
+
+        System.out.println("End of the program!");
 
 
 
