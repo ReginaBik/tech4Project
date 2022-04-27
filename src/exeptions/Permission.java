@@ -33,6 +33,24 @@ public class Permission {
         if(day == 1 || day == 7) System.out.println("if it is weekend user is allowed to check in 10 AM to 3 PM");
         else if(day >= 2 && day <= 6) System.out.println("if it is weekday user is allowed to check in from 10 AM to 5 PM");
         else throw new RuntimeException("\"The input does not represent any day!!!\"");
+
+
+        /*    public static void checkIn(int day){
+        switch (day){
+            case 1:
+            case 7:
+                System.out.println("user is allowed to check in 10 AM to 3 PM");
+                break;
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                System.out.println("user is allowed to check in 10 AM to 5 PM");
+                break;
+            default:
+                throw new RuntimeException("The input does not represent any day!!!");
+        }*/
     }
 
 
