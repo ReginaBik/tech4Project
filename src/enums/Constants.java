@@ -38,4 +38,16 @@ public class Constants {
         NOVEMBER,
         DECEMBER
     }
+
+    public enum Frequencies{
+        HOURLY,
+        DAILY,
+        WEEKLY,
+        BIWEEKLY,
+        MONTHLY,
+        YEARLY
+    }
+
+
+
 }
