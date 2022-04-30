@@ -22,6 +22,12 @@ public class Practice_01 {
 
        // SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 
+        /*   System.out.println("Hey, please enter your year of birth");
+        System.out.println("You are " + (Integer.parseInt(new SimpleDateFormat("yyyy").format(new Date())) -
+        new Scanner(System.in).nextInt()) + " years old!");
+         */
+
+
 
 
     }
