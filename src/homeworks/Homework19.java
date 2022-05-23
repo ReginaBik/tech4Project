@@ -1,5 +1,7 @@
 package homeworks;
 
+import java.util.Arrays;
+
 public class Homework19 {
 
         /*Requirement:
@@ -76,8 +78,62 @@ public class Homework19 {
         return middle;
     }
 
+   /* -Create a method called no13()
+    -This method will take an int array as argument and it will return a new
+    array with all 13 replaced with 0.
+     _______Task 6________ */
 
- public static void main(String[] args) {
+    public static int[] no13(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 13) arr[i] = 0;
+        }
+        return arr;
+    }
+
+    /*-Create a method called arrFactorial()
+    -This method will take an int array as argument and it will return the
+    array with every number replaced with their factorials.
+    _______Task 7________  */
+
+    public static int[] arrFactorial(int[] numbers){
+        int[] arr = new int[numbers.length];
+        int factorial = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (numbers[i] == 0 || numbers[i] == 1) arr[i] = 1;
+            else{
+                for (int j = 1; j <= numbers[i]; j++) {
+                    factorial *= j;
+                }
+                arr[i] = factorial;
+                factorial = 1;
+            }
+        }
+        return arr;
+    }
+
+   /* -Create a method called categorizeCharacters()
+    -This method will take String as an argument and return a String array as
+    letters at index of 0, digits at index of 1 and specials at index of 2.
+     _______Task 8________  */
+
+    public static String[] categorizeCharacters(String str){
+        char[] chars = str.toCharArray();
+        String letters = "";
+        String digits = "";
+        String specials = "";
+        for (char c : chars) {
+            if (Character.isLetter(c)) letters += c;
+            else if (Character.isDigit(c)) digits += c;
+            else if (!Character.isLetterOrDigit(c) && !Character.isWhitespace(c)) specials += c;
+        }
+        String[] categorizedChars = {letters, digits, specials};
+        return categorizedChars;
+    }
+
+
+
+
+    public static void main(String[] args) {
         System.out.println("Task1\n");
         System.out.println(Homework19.noDigit("hdhhd222"));
 
@@ -90,8 +146,17 @@ public class Homework19 {
         System.out.println("\nTask4\n");
         System.out.println(Homework19.hasUpperCase("kiLot"));
 
-        System.out.println("\nTask4\n");
+        System.out.println("\nTask5\n");
         System.out.println(Homework19.middleInt(5, 2, 45));
+
+        System.out.println("\nTask6\n");
+        System.out.println(Arrays.toString(Homework19.no13(new int[] {13, 13, 13, 13, 13})));
+
+        System.out.println("\nTask7\n");
+        System.out.println(Arrays.toString(Homework19.arrFactorial(new int[] {0, 2, 4 , 1})));
+
+        System.out.println("\nTask8\n");
+        System.out.println(Arrays.toString(Homework19.categorizeCharacters("“12ab$%3c%”")));
 
 
 
