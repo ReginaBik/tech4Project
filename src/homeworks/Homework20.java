@@ -1,6 +1,8 @@
 package homeworks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.ListIterator;
 
 public class Homework20 {
 
@@ -24,6 +26,14 @@ public class Homework20 {
      and it will return an ArrayList with all zeros removed
      from the original Integer ArrayList.
      ___________Task2___________*/
+
+    public static ArrayList<Integer> noZero(ArrayList<Integer> arr) {
+        ListIterator<Integer> it = arr.listIterator();
+        while (it.hasNext() && it.next() == 0) {
+            it.remove();
+        }
+        return arr;
+    }
 
 
 
@@ -94,6 +104,7 @@ public class Homework20 {
         System.out.println(Homework20.hasLowerCase("hello"));
 
         System.out.println("\nTask2\n");
+        System.out.println(noZero(new ArrayList(Arrays.asList(0, 5, 4, 0, 0))));
         System.out.println("\nTask3\n");
         System.out.println("\nTask4\n");
         System.out.println("\nTask5\n");
