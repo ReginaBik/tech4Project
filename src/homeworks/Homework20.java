@@ -90,6 +90,16 @@ public class Homework20 {
     NOTE: Do not remove spaces.
       ___________Task6___________*/
 
+    public static String removeStringsSpecialDigits(String str) {
+        String result = "";
+        for(char c : str.toCharArray()){
+            if(Character.isWhitespace(c) || Character.isLetter(c)){
+                result += c;
+            }
+        }
+        return result;
+    }
+
 
 
     /*-Create a method called removeArraySpecialsDigits()
@@ -98,6 +108,23 @@ public class Homework20 {
     characters or digits from the elements.
     NOTE: Assume that array size is at least 1.
       ___________Task7___________*/
+
+    public static String[] removeArraySpecialsDigits(String[] arr){
+        for(int i = 0; i <= arr.length-1; i++){
+            arr[i] = arr[i].replaceAll("[^A-Za-z]", "");
+        }
+        return arr;
+    }
+
+
+
+    /*-Create a method called removeAndReturnCommons()
+    -This method will take two String ArrayList and it will
+    return all the common words as String ArrayList.
+    NOTE: Assume that both ArrayList sizes are at least 1.
+      ___________Task8___________*/
+
+
 
 
 
@@ -108,7 +135,19 @@ public class Homework20 {
     If the element itself equals to x or X or contains only x
     letters, then remove that element.
     NOTE: Assume that ArrayList size is at least 1.
-      ___________Task8___________*/
+      ___________Task9___________ */
+
+   /* public static ArrayList<String> noXInVariables2(ArrayList<String> arrayList) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            if(arrayList.get(i).toLowerCase().contains("x")){
+                arrayList.set(i, arrayList.get(i).replaceAll("[xX]", ""));
+            }
+        }
+        arrayList.removeIf(String::isEmpty);
+        return arrayList;
+    }*/ //Akin's solution
+
+
 
 
 
@@ -132,15 +171,26 @@ public class Homework20 {
         System.out.println(reverseSentence("Java is fun"));
 
         System.out.println("\nTask6\n");
+        System.out.println(removeStringsSpecialDigits("123Java #$%is fun"));
+        System.out.println(removeStringsSpecialDigits("Selenium"));
+        System.out.println(removeStringsSpecialDigits("Selenium 123#$%Cypress"));
 
 
         System.out.println("\nTask7\n");
+        System.out.println(Arrays.toString(removeArraySpecialsDigits(new String[]{"123Java", "#$%is", "fun"})));
+        System.out.println(Arrays.toString(removeArraySpecialsDigits(new String[]{"Selenium", "123$%", "###"})));
+        System.out.println(Arrays.toString(removeArraySpecialsDigits(new String[]{"Selenium", "123#$%Cypress"})));
+
 
 
         System.out.println("\nTask8\n");
 
+      /*  System.out.println("\nTask9\n");
+        ArrayList<String> noXList = new ArrayList<>();
+        noXList.add("xyl");
+        noXList.add("abc");
+        noXList.add("123");
 
+        System.out.println(noXInVariables2(new ArrayList<>(noXList)));*/
     }
-
-
 }
