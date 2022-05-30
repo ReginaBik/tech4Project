@@ -56,6 +56,13 @@ public class Homework20 {
     NOTE: The method is case-sensitive
     ___________Task4___________*/
 
+    public static boolean containsValue(String[] str, String s) {
+        for (String s1 : str) {
+            if (s.equals(s1)) return true;
+        }
+        return false;
+    }
+
 
     /*-Create a method called reverseSentence()
     -This method will take a String argument and it will
@@ -64,6 +71,16 @@ public class Homework20 {
     are two words inside the sentence at least. If there is no
     two words return “There is not enough words!”.
      ___________Task5___________*/
+
+    public static String reverseSentence(String str) {
+        String[] strArr = str.trim().split(" ");
+        StringBuilder strNew = new StringBuilder();
+        if (!str.trim().contains(" ")) return "There is not enough words!";
+        for (int i = strArr.length - 1; i >= 0; i--) {
+            strNew.append(strArr[i].toLowerCase() + " ");
+        }
+        return strNew.substring(0, 1).toUpperCase().concat(strNew.substring(1)).trim();
+    }
 
 
     /*-Create a method called removeStringSpecialsDigits()
@@ -106,10 +123,20 @@ public class Homework20 {
         System.out.println("\nTask2\n");
         System.out.println(noZero(new ArrayList(Arrays.asList(0, 5, 4, 0, 0))));
         System.out.println("\nTask3\n");
+
         System.out.println("\nTask4\n");
+        System.out.println(containsValue(new String[]{"abc", "def", "123"}, "Abc"));
+        System.out.println(containsValue(new String[]{"abc", "def", "123", "java", "hello"}, "123"));
+
         System.out.println("\nTask5\n");
+        System.out.println(reverseSentence("Java is fun"));
+
         System.out.println("\nTask6\n");
+
+
         System.out.println("\nTask7\n");
+
+
         System.out.println("\nTask8\n");
 
 
