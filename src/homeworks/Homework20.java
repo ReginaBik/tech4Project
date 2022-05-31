@@ -44,6 +44,26 @@ public class Homework20 {
     squared.
     ___________Task3___________*/
 
+    public static int[][] numberAndSquare(int[] numbers){
+        int[][] numsSquare = new int[3][];
+        for(int i = 0; i < numbers.length; i++){
+        int[] numAndSquare = new int[2];
+        numAndSquare[0] = numbers[i];
+        numAndSquare[1] = numbers[i] * numbers[i];
+        numsSquare[i] = numAndSquare;
+        }
+        return numsSquare ;
+    }
+
+    /*public static int[][] numberAndSquare(int[] arr){
+    int[][] squared = new int[arr.length][];
+    for (int i = 0; i < arr.length; i++) {
+            squared[i][0] += arr[i];
+            squared[i][1] += arr[i]*arr[i];
+        }
+    return squared;
+}*/
+
 
 
 
