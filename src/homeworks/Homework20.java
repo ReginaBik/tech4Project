@@ -144,6 +144,18 @@ public class Homework20 {
     NOTE: Assume that both ArrayList sizes are at least 1.
       ___________Task8___________*/
 
+    public static ArrayList<String> removeAndReturnCommons(ArrayList<String> l1, ArrayList<String> l2){
+        ArrayList<String> duplicates = new ArrayList<>();
+
+        for (String s1 : l1) {
+            for (String s2 : l2) {
+                if (s1.equals(s2) && !duplicates.contains(s1)) duplicates.add(s1);
+            }
+        }
+
+        return duplicates;
+    }
+
 
 
 
@@ -157,7 +169,7 @@ public class Homework20 {
     NOTE: Assume that ArrayList size is at least 1.
       ___________Task9___________ */
 
-   /* public static ArrayList<String> noXInVariables2(ArrayList<String> arrayList) {
+   public static ArrayList<String> noXInVariables2(ArrayList<String> arrayList) {
         for (int i = 0; i < arrayList.size(); i++) {
             if(arrayList.get(i).toLowerCase().contains("x")){
                 arrayList.set(i, arrayList.get(i).replaceAll("[xX]", ""));
@@ -165,7 +177,7 @@ public class Homework20 {
         }
         arrayList.removeIf(String::isEmpty);
         return arrayList;
-    }*/ //Akin's solution
+    } //Akin's solution
 
 
 
