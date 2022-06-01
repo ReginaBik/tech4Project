@@ -217,12 +217,24 @@ public class Homework20 {
 
         System.out.println("\nTask8\n");
 
-      /*  System.out.println("\nTask9\n");
+        ArrayList<String> array1 = new ArrayList<>();
+        array1.add("Java");
+        array1.add("is");
+        array1.add("fun");
+
+        ArrayList<String> array2 = new ArrayList<>();
+        array2.add("Java");
+        array2.add("C#");
+        array2.add("Python");
+        System.out.println(removeAndReturnCommons(new ArrayList<>(array1), new ArrayList<>(array2)));
+
+       System.out.println("\nTask9\n");
         ArrayList<String> noXList = new ArrayList<>();
         noXList.add("xyl");
         noXList.add("abc");
         noXList.add("123");
+        noXList.add("xX");
 
-        System.out.println(noXInVariables2(new ArrayList<>(noXList)));*/
+        System.out.println(noXInVariables2(new ArrayList<>(noXList)));
     }
 }
