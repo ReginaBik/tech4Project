@@ -90,6 +90,14 @@ public class Homework19 {
         return arr;
     }
 
+    public static int[] no9(int[] arr){
+        for(int i =0; i< arr.length; i++){
+            if(arr[i] == 9) arr[i] = 2;
+        }
+        return arr;
+
+    }
+
     /*-Create a method called arrFactorial()
     -This method will take an int array as argument and it will return the
     array with every number replaced with their factorials.
