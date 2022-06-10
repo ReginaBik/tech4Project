@@ -96,6 +96,21 @@ My Attempt
         return biggestNumber;
     }
 
+        /*public static int findBiggestNumber(String str){
+      int num = 0; int biggest = 0;
+      for(int i = 0; i < str.length(); i++){//start looping through
+        if(Character.isDigit(str.charAt(i)))//we are checking if the character is digit
+          num = num * 10 + (str.charAt(i) - '0');
+          else {
+          biggest = Math.max(biggest, num);//updating the maximum value
+           num = 0;//reset the number
+        }
+      }
+      return Math.max(biggest, num);
+    }
+
+    */
+
     /*TASK 5
     -Create a method called
     countSequenceOfCharacters()
@@ -104,6 +119,24 @@ My Attempt
     characters in a sequence in the String.
     NOTE: If given String is empty, then return empty String.
     NOTE: It is case sensitive!!! */
+
+    public static String countSequenceOfCharacters(String str){
+        String sequence = "";
+        int count = 1;
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j < str.length(); j++) {
+                if (str.charAt(i) == str.charAt(j))
+                    count++;
+            }
+            if (!sequence.contains(str.charAt(i) + "")) {
+                sequence += str.charAt(i);
+                sequence += count;
+                count = 1;
+            }
+        }
+        return sequence;
+
+    }
 
 
 
@@ -118,9 +151,7 @@ My Attempt
 
         System.out.println("Task 4 = " + findBiggestNumber("“a11b4c  6#”"));
 
-
-
-
+        System.out.println("Task 5 = " + countSequenceOfCharacters("abbcca"));
 
 
 
