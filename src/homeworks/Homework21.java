@@ -43,7 +43,10 @@ public class Homework21 {
     an int which is the sum of all numbers presented in the String.
     NOTE: If there are no numbers represented in the String,
     return 0.*/
-/* tried
+/*
+
+
+My Attempt
     public static int findSumNumbers(String str) {
         int sum = 0;
 
@@ -54,6 +57,7 @@ public class Homework21 {
     }
 
  */
+    //GROUP HELP
 
     public static int findSumNumbers(String s){
         int sum = 0;
@@ -76,6 +80,22 @@ public class Homework21 {
     NOTE: If there are no numbers represented in the String,
     return 0.*/
 
+    //My attempt - does return biggest number BUt doesn't consider 2 or more digits as one number
+
+    public static int findBiggestNumber(String str){
+        int biggestNumber = 0;
+        for(int i = 0; i < str.length(); i++){
+            if(Character.isDigit(str.charAt(i))) biggestNumber = Integer.parseInt(String.valueOf(str.charAt(i)));
+            for(int j = 1; j < str.length() - 1; j++){
+                if(Character.isDigit(str.charAt(j)) && ((int) str.charAt(j) > (int) str.charAt(i))) {
+                    biggestNumber = Integer.parseInt(String.valueOf(str.charAt(j)));
+                }
+            }
+        }
+
+        return biggestNumber;
+    }
+
     /*TASK 5
     -Create a method called
     countSequenceOfCharacters()
@@ -86,13 +106,21 @@ public class Homework21 {
     NOTE: It is case sensitive!!! */
 
 
+
+
     public static void main(String[] args) {
 
-        System.out.println("Task 1" + findSumNumbers("a1b4cll6") + "\n");
+        System.out.println("Task 1 = " + findSumNumbers("a1b4cll6"));
 
-        System.out.println("Task 2" + fizzBuzz2(20));
+        System.out.println("Task 2 = " + fizzBuzz2(20));
 
-        System.out.println("Task 3" + findSumNumbers("b34n1mh2"));
+        System.out.println("Task 3 = " + findSumNumbers("b34n1mh2"));
+
+        System.out.println("Task 4 = " + findBiggestNumber("“a11b4c  6#”"));
+
+
+
+
 
 
 
