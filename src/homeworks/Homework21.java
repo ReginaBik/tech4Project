@@ -138,6 +138,25 @@ My Attempt
 
     }
 
+    public static String countSequenceOfCharacters2(String string){
+
+            StringBuilder result = new StringBuilder();
+            int count = 0;
+            for (int i = 0; i < string.length(); i++) {
+                if (i < string.length()-1 && string.charAt(i) == string.charAt(i+1)){
+                    count ++;
+                }
+                else {
+                    count ++;
+                    result.append(count).append(string.charAt(i));
+                    count = 0;
+                }
+            }
+            return result.toString();
+        }
+
+
+
 
 
 
