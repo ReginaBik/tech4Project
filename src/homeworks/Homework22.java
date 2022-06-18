@@ -1,5 +1,7 @@
 package homeworks;
 
+import java.util.Arrays;
+
 public class Homework22 {
     /*Task 1
     * -Create a method called fibonacciSeries1()
@@ -8,7 +10,7 @@ public class Homework22 {
     array.
     REMEMBER: Fibonacci series = 0, 1, 1, 2, 3, 5, 8, 13*/
 
-    public static int[] fibonacciSeries1(int n){
+    public static int[] fibonacciSeries1(int n) {
         int[] fiboArray = new int[n];
         int fibo1 = 0;
         int fibo2 = 1;
@@ -31,6 +33,19 @@ public class Homework22 {
     return the nth series of Fibonacci number as an
     int.
     REMEMBER: Fibonacci series = 0, 1, 1, 2, 3, 5, 8, 13*/
+
+    public static int fibonacciSeries2(int n) {
+        int[] fiboArray = new int[n];
+        fiboArray[0] = 0;
+        fiboArray[1] = 1;
+
+        for (int i = 2; i < n; i++) {
+            fiboArray[i] = fiboArray[i - 1] + fiboArray[i - 2];
+        }
+        return fiboArray[n-1];
+
+    } 
+
 
 
     /*Task 3
@@ -58,4 +73,22 @@ public class Homework22 {
     NOTE: If there are more than one duplicate, then return
     the one for which second occurrence has the smallest
     index.*/
+
+
+    public static void main(String[] args) {
+
+
+        System.out.println("Task 1 = " + Arrays.toString(fibonacciSeries1(5)));
+
+        System.out.println("\nTask 2 = " + fibonacciSeries2(5));
+
+        System.out.println("\nTask 3 = ");
+
+        System.out.println("\nTask 4 = ");
+
+        System.out.println("\nTask 5 = ");
+
+
+
+    }
 }
