@@ -57,6 +57,12 @@ public class Homework22 {
     NOTE: if one of the array is empty, then return unique values
     from the other array.*/
 
+    public static int[] findUniques(int[] arr1, int[] arr2){
+        int n = 1;
+        int[] uniqueArray = new int[n];
+        return uniqueArray;
+    }
+
     /*Task 4
     * -Create a method called isPowerOf3()
     -This method will take an int argument, and it will
