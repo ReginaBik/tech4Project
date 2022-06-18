@@ -156,10 +156,6 @@ My Attempt
         }
 
 
-
-
-
-
     public static void main(String[] args) {
 
         System.out.println("Task 1 = " + findSumNumbers("a1b4cll6"));
