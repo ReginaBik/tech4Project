@@ -1,6 +1,9 @@
 package homeworks;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.stream.IntStream;
 
 public class Homework22 {
     /*Task 1
@@ -56,11 +59,9 @@ public class Homework22 {
     NOTE: If both arrays are empty, then return an empty array.
     NOTE: if one of the array is empty, then return unique values
     from the other array.*/
-
-    public static int[] findUniques(int[] arr1, int[] arr2){
-        int n = 1;
-        int[] uniqueArray = new int[n];
-        return uniqueArray;
+    //NOT MY SOLUTION
+    public static int[] findUniques(int[] array1, int[] array2) {
+        return IntStream.concat(Arrays.stream(array1), Arrays.stream(array2)).distinct().toArray();
     }
 
     /*Task 4
@@ -69,6 +70,14 @@ public class Homework22 {
     return true if given int argument is equal to 3
     power of the X. Otherwise, it will return false.
     Numbers that are power of 3 = 1, 3, 9, 27, 81, 243*/
+
+    public static boolean isPowerOf_3(int number) {
+        if (number < 1) return false;
+        while (number % 3 == 0) {
+            number /= 3;
+        }
+        return number == 1;
+    }
 
     /*Task 5
     * -Create a method called firstDuplicate()
@@ -80,6 +89,22 @@ public class Homework22 {
     the one for which second occurrence has the smallest
     index.*/
 
+    public static int firstDuplicate(int[] array) {
+        if (array.length <= 1) return -1;
+        else {
+            ArrayList<Integer> list = new ArrayList<>();
+            for (int num : array) list.add(num);
+            ArrayList<Integer> newDupesList = new ArrayList<>();
+            for (int i = 0; i < list.size(); i++) {//1, 2, 3, 3, 4, 1
+                for (int j = i + 1; j < list.size(); j++) {
+                    if (list.get(i) == list.get(j)) newDupesList.add(list.get(i));
+                }
+                Collections.sort(newDupesList);
+            }
+            return newDupesList.get(newDupesList.size() - 1);
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -88,13 +113,11 @@ public class Homework22 {
 
         System.out.println("\nTask 2 = " + fibonacciSeries2(5));
 
-        System.out.println("\nTask 3 = ");
+        System.out.println("\nTask 3 = " + Arrays.toString(findUniques(new int[]{8, 9}, new int[]{9, 8, 9})));
 
-        System.out.println("\nTask 4 = ");
+        System.out.println("\nTask 4 = " + isPowerOf_3(81));
 
-        System.out.println("\nTask 5 = ");
+        System.out.println("\nTask 5 = " + firstDuplicate(new int[]{1, 2, 3, 3, 4, 1}));
 
-
-
-    }
+  }
 }
