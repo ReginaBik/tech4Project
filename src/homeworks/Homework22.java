@@ -1,8 +1,6 @@
 package homeworks;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Homework22 {
@@ -30,6 +28,8 @@ public class Homework22 {
 
 
 
+
+
     /*Task 2
     * -Create a method called fibonacciSeries2()
     -This method will take an int argument as n, and it will
@@ -47,7 +47,12 @@ public class Homework22 {
         }
         return fiboArray[n-1];
 
-    } 
+    }
+
+    /* Salih's solution
+    public static int fibonacciSeries2(int n){
+    return fibonacciSeries1(n)[n -1];
+    }*/
 
 
 
@@ -59,10 +64,28 @@ public class Homework22 {
     NOTE: If both arrays are empty, then return an empty array.
     NOTE: if one of the array is empty, then return unique values
     from the other array.*/
+
     //NOT MY SOLUTION
     public static int[] findUniques(int[] array1, int[] array2) {
         return IntStream.concat(Arrays.stream(array1), Arrays.stream(array2)).distinct().toArray();
     }
+
+  /*  public static int[] findUniques2(int[] a, int[] b){
+        Set<Integer> duplicates = new HashSet<>();
+     for (int first : a){
+         for (int second : b){
+             if(first == second) duplicates.add(first);
+         }
+     }
+     Set<Integer> nonDuplicates = new HashSet<>();
+
+     for (int i:a)if(!duplicates.contains(i)) nonDuplicates.add(i);
+         for (int i :b)if(!duplicates.contains(i)) nonDuplicates.add(i);
+
+         int index = 0;
+         int[] nonDupArray = new int[nonDuplicates.size()];
+         for(Integer nonDuplicate : nonDuplicates) nonDupArray.
+    }*/
 
     /*Task 4
     * -Create a method called isPowerOf3()
