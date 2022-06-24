@@ -42,7 +42,10 @@ public class Homework23 {
     double. Item prices are given below
     Apple = $2.00
     Orange = $3.29
-    Mango = $4.99*/
+    Mango = $4.99
+    BUT there will be some discounts as below
+    There will be %50 discount for every second Apple
+    There will be 1 free Mango if customer gets 3. So, fourth one is free*/
 
     public static Double calculateTotalPrice2(Map<String, Integer> listOfItems){
         Double totalPrice2 = 0.0;
