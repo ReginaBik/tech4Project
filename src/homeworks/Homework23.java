@@ -1,5 +1,8 @@
 package homeworks;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 public class Homework23 {
 
     /*Task 1
@@ -9,6 +12,11 @@ public class Homework23 {
     and returns a collection that has all the keys and values
     as entries.
     NOTE: The keys should be sorted*/
+
+    public static TreeMap<Integer, String> parseData(String str){
+        TreeMap<Integer, String> sortedData = new TreeMap<>();
+        return sortedData;
+    }
 
     /*Task 2
     * Requirement:
@@ -21,6 +29,12 @@ public class Homework23 {
     Mango = $4.99
     Pineapple = $5.25*/
 
+    public static Double calculateTotalPrice1(Map<String, Integer> listOfItems){
+        Double totalPrice = 0.0;
+        return totalPrice;
+
+    }
+
     /*Task 3
     Requirement:
     Write a method calculateTotalPrice2() which takes a Map of some
@@ -29,4 +43,10 @@ public class Homework23 {
     Apple = $2.00
     Orange = $3.29
     Mango = $4.99*/
+
+    public static Double calculateTotalPrice2(Map<String, Integer> listOfItems){
+        Double totalPrice2 = 0.0;
+        return totalPrice2;
+
+    }
 }
