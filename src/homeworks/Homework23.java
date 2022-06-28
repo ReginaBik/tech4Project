@@ -81,6 +81,8 @@ public class Homework23 {
 
     }
 
+
+
     public static void main(String[] args) {
 
 
@@ -98,5 +100,6 @@ public class Homework23 {
         map2.put("Mango", 8);
         map2.put("Orange", 3);
         System.out.println("Task 3 = " + calculateTotalPrice2(map2));
+
     }
 }
