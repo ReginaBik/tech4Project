@@ -11,10 +11,15 @@ public class SalihHomeworkInterview {
      */
 
     public static int consecutiveNumbers(int[] arr, int number){
-        int sum = 0;
+
         if(number > arr.length) return -1;
+        int sum = Integer.MIN_VALUE;
+
         for(int i = 0; i< arr.length-1; i++){
-            for (int j = number; j > 0 ; j--) {
+            for(int j = number; j > 0 ; j--) {
+                if(arr[i] > sum) sum = arr[i];
+
+
 
 
             }
