@@ -21,6 +21,18 @@ public class Practice01 {
         return list.get(1);
     }
 
+
+
+    public static String reversed(String str) {
+        return new StringBuilder(str).reverse().toString();
+    }
+
+    public static String removeDigit(String str) {
+        return str.replaceAll("[0-9]", "");
+    }
+
+
+
     public static void main(String[] args) {
         /*Assume that you are given a String as below;
         String str = ”SDLC is step by step procedure to create an application”;
