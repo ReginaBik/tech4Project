@@ -33,6 +33,19 @@ public class Practice01 {
 
 
 
+    public static String removeDigit1(String str) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (!Character.isDigit(c)) {
+                sb.append(c);
+            }
+        }
+        return sb.toString().trim();
+    }
+
+
+
     public static void main(String[] args) {
         /*Assume that you are given a String as below;
         String str = ”SDLC is step by step procedure to create an application”;
