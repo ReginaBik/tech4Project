@@ -2,9 +2,25 @@ package homeworks;
 
 import utilities.ScannerHelper;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
+import java.util.TreeSet;
 
 public class Practice01 {
+
+
+
+
+
+
+
+    public static int middleNumber(int a, int b, int c) {
+        TreeSet<Integer> set = new TreeSet<>(Arrays.asList(a, b, c));
+        ArrayList<Integer> list = new ArrayList<>(set);
+        return list.get(1);
+    }
+
     public static void main(String[] args) {
         /*Assume that you are given a String as below;
         String str = ”SDLC is step by step procedure to create an application”;
@@ -107,6 +123,9 @@ String str = “    SDLC has planning, design, development, testing, deployment 
         String l = ScannerHelper.getAStringFromUser();
 
         System.out.println(l.contains("$") ? l.indexOf('$'):"doesn't contain $");
+
+
+
 
 
     }
